@@ -1,0 +1,8 @@
+.hover:hover {
+    background-color: red;
+    border-radius: 50px 50px 50px 50px;
+    color: white;
+    -webkit-box-shadow: -1px 8px 24px 0px rgba(255, 0, 0, 1);
+    -moz-box-shadow: -1px 8px 24px 0px rgba(255, 0, 0, 1);
+    box-shadow: -1px 8px 24px 0px rgba(255, 0, 0, 1);
+}

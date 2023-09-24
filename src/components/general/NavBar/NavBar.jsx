@@ -14,7 +14,7 @@ const NavBar = ({Element}) => {
                 <img src={logoIcon} alt="logoIcon" id={logoIconStyle} />
                 <BottonTonggler/>
                 <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul className="navbar-nav">
+                    <ul className="navbar-nav ">
                        {Element}
                     </ul>
                 </div>
