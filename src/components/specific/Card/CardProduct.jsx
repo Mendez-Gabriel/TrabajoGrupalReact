@@ -1,34 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import styles from './CardProduct.modules.css';
-// import axios from 'axios';
-
-
-function CardProduct({image, title, description, price}) {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    // axios.get("https://fakestoreapi.com/products/category/electronic")
-    // .then(({data}) => {
-    //   console.log(data)
-    // } )
-    // .catch(() => {alert('no se encontro la pag')})
-    // .finally(() => {})
-    fetch('https://fakestoreapi.com/products')
-      .then((response) => response.json())
-      .then((data) => setProducts(data));
-  }, []);
-
+function CardProduct({product, image, title, description, price}) {
   return (
-    <div className="card-prodct">
-      {products.map((product) => (
-        <div key={product.id} className="card-product">
-          <img src={product.image} alt={product.title}></img>
-          <h1>{product.title}</h1>
-          <p>{product.description}</p>
-          <div className='precio mb-3'>${product.price}</div>
-            <span className={`leer-mas ${product.description.length > 1 ? 'active' : '' }`}><a href='./Item/Item.jsx'>Leer más</a></span>
+    <div className="card-container">
+        <div key={product.id} className="card-product mt-5 col-12 col-md-4 col-xl-2">
+          <img src={product.image} className='img-fluid product-image' alt={product.title} ></img>
+          <h1 className='mt-3 product-title'>{product.title}</h1>
+          <div className='precio mt-5'>${product.price}</div>
+            <a href='./Item/Item.jsx' className='mt-3' >Ver más</a> 
           </div>
-      ))}
     </div>
   );
 }
