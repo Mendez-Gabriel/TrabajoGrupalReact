@@ -1,0 +1,56 @@
+.card-product {
+  width: calc(25% - 20px);
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 5px 5px 9px 5px rgba(0,0,0,0);
+  transition: 0.5s ease;
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  background-color: #f3f3f3;
+}
+
+.card-product:hover {
+  box-shadow: 4px 4px 14px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-product img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-product h1 {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.card-product p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+}
+
+.card-product .precio {
+  font-size: 1.5rem;
+  color: #07ac62;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.card-product .leer-mas {
+  display: none;
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.card-product .leer-mas.active {
+  display: inline;
+}
