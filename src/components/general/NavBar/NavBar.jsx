@@ -8,7 +8,7 @@ const NavBar = ({Element}) => {
     const { logoIconStyle } = style;
 
     return (
-        <nav className="navbar navbar-expand-lg fixed-top bg-dark">
+        <nav className="navbar navbar-expand-lg fixed-top bg-dark bg-gradient">
             
             <div className="container-fluid">
                 <img src={logoIcon} alt="logoIcon" id={logoIconStyle} />
