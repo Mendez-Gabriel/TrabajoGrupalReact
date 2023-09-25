@@ -1,4 +1,8 @@
 .imgProduct{
-    width: 80%;
+    width: 18rem;
     height: 15rem;
+}
+
+.btnProduct{
+    height: 27rem;
 }

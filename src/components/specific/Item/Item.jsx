@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import 'bootstrap-icons/font/bootstrap-icons.min.css'
+import { useParams } from 'react-router-dom'
 
 const Item = () => {
+  let params = useParams();
+  console.log(params)
+
   const [item, setItem] = useState({})
   useEffect(() => {
     axios.get('https://fakestoreapi.com/products/15')
