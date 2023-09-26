@@ -17,7 +17,7 @@ const Footer = ({elements}) => {
            <p className='text-info'>&copy; {new Date().getFullYear()} Trendy Threads</p>
          </div>
 
-         <div className='col-lg-6 d-flex'>
+         <div className='col-lg-6 d-flex justify-content-center'>
           {elements}
          </div>
 

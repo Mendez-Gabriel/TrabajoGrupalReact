@@ -9,8 +9,12 @@ import Femenino from './pages/Femenino';
 import Item from './components/specific/Item/Item'
 import Footer from "./components/general/footer/Footer";
 import BottonFooter from "./components/specific/BottonFooter/BottonFooter";
+import Error404 from './pages/Error404';
 
 function App() {
+  const is404Page = window.location.pathname === '*';
+
+
   return (
     <BrowserRouter>
       <NavBar
@@ -29,8 +33,9 @@ function App() {
         <Route path='/masculino' Component={Masculino}/>
         <Route path='/femenino' Component={Femenino}/>
         <Route path='/productos/:id' Component={Item}/>
-        <Route path='*' Component={""}/>
+        <Route path='*' Component={Error404}/>
       </Routes>
+      {is404Page ? null : 
       <Footer
         elements={
           <>
@@ -39,7 +44,7 @@ function App() {
             <BottonFooter Text={"Contactanos"} link={"/*"} />
           </>
         }
-      />
+      />}
     </BrowserRouter>
   );
 }
