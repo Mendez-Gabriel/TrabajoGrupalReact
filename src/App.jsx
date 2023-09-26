@@ -23,8 +23,8 @@ function App() {
           <>
             <BottonNav link={'/'} Text={'Home'} style={'nav-link active text-light'}/>
             <BottonNav link={'/productos'} Text={'Productos'} style={'nav-link active text-light'}/>
-            <BottonNav link={'/masculino'} Text={'Masculino'} style={'nav-link active text-light'}/>
-            <BottonNav link={'/femenino'} Text={'Femenino'} style={'nav-link active text-light'}/> 
+            <BottonNav link={'/*'} Text={'Masculino'} style={'nav-link active text-light'}/>
+            <BottonNav link={'/*'} Text={'Femenino'} style={'nav-link active text-light'}/> 
             <BottonNav link={'/contacto'} Text={'Contacto'} style={'nav-link active text-light'}/> 
           </>
         }
@@ -32,11 +32,11 @@ function App() {
       <Routes>
         <Route path='/' Component={Homepages}/>
         <Route path='/productos' Component={Productos}/>
-        <Route path='/masculino' Component={Masculino}/>
-        <Route path='/femenino' Component={Femenino}/>
+        <Route path='/*' Component={Error404}/>
+        <Route path='/*' Component={Error404}/>
         <Route path='/contacto' Component={Contact}/>
         <Route path='/productos/:id' Component={Item}/>
-        <Route path='*' Component={Error404}/>
+        <Route path='/*' Component={Error404}/>
       </Routes>
       {is404Page ? null : 
       <Footer
