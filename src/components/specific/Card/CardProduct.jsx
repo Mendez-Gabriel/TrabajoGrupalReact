@@ -5,7 +5,7 @@ function CardProduct({product, image, title, description, price}) {
           <img src={product.image} className='img-fluid product-image' alt={product.title} ></img>
           <h1 className='mt-3 product-title'>{product.title}</h1>
           <div className='precio mt-5'>${product.price}</div>
-            <a href='./Item/Item.jsx' className='mt-3' >Ver más</a> 
+            <a href='./Item/Item.jsx' className='mt-3' >Ver más</a>
           </div>
     </div>
   );
