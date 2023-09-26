@@ -1,16 +1,23 @@
 import React from 'react';
-import Homepages from '../../../pages/Homepages';
+import { Link } from 'react-router-dom';
 import style from './Imagen.module.css'
+import Imagenes from '../imagenes/Imagenes';
 
-const Imagen = ({ img, Title }) => {
+const Imagen = ({ img, Title, id }) => {
 
-    const { imgProduct } = style;
+    const { imgProduct, btnProduct, padding } = style;
 
     return (
 
-        <div className=' d-flex flex-column '>
-            <img src={img} className={`d-block ${imgProduct} mx-4`} alt="..." />
-            <h5 className='text-center mx-4'>{Title}</h5>
+        <div className=' d-flex flex-column mx-2 '>
+            <Link to={`/productos/${id}`}>
+                <button className={`btn btn-light rounded-4  ${btnProduct}`}>
+                    <div className='flex-column '>  
+                        <Imagenes src={img} style={imgProduct}/>                     
+                        <h5 className={`${padding}`}>{Title}</h5>
+                    </div>
+                </button>
+            </Link>
         </div>
 
     )
