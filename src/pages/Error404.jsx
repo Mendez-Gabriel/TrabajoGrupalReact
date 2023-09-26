@@ -21,7 +21,6 @@ const Error404 = () => {
                     <i class="bi bi-arrow-clockwise me-2"></i>
                     <BottonFooter Text={'Recargar'} link={'*'} />
                 </button>
-
             </div>
         </div>
     )

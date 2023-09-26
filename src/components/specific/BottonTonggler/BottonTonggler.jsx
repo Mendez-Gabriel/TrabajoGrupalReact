@@ -10,7 +10,7 @@ const BottonTonggler = () => {
 
     const handlerClick = () => {
         setClick(!click)
-        
+
     }
 
 
@@ -20,7 +20,7 @@ const BottonTonggler = () => {
                 <span></span>
                 <span></span>
                 <span></span>
-                
+
             </div>
         </>
     )
