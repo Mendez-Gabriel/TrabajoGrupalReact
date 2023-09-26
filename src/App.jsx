@@ -6,6 +6,7 @@ import BottonNav from './components/specific/BottonNav/BottonNav';
 import Productos from './pages/Productos';
 import Masculino from './pages/Masculino';
 import Femenino from './pages/Femenino';
+import Item from './components/specific/Item/Item'
 
 function App() {
   
@@ -14,10 +15,10 @@ function App() {
       <NavBar 
         Element={
           <>
-            <BottonNav link={'/'} Text={'Home'} style={'text-light'}/>
-            <BottonNav link={'/productos'} Text={'Productos'} style={'text-light'}/>
-            <BottonNav link={'/masculino'} Text={'Femenino'} style={'text-light'}/>
-            <BottonNav link={'/femenino'} Text={'Masculino'} style={'text-light'}/> 
+            <BottonNav link={'/'} Text={'Home'} style={'nav-link active text-light'}/>
+            <BottonNav link={'/productos'} Text={'Productos'} style={'nav-link active text-light'}/>
+            <BottonNav link={'/masculino'} Text={'Femenino'} style={'nav-link active text-light'}/>
+            <BottonNav link={'/femenino'} Text={'Masculino'} style={'nav-link active text-light'}/> 
           </>
         }
       />
@@ -26,6 +27,7 @@ function App() {
         <Route path='/productos' Component={Productos}/>
         <Route path='/masculino' Component={Masculino}/>
         <Route path='/femenino' Component={Femenino}/>
+        <Route path='/productos/:id' Component={Item}/>
         <Route path='*' Component={""}/>
       </Routes>
     </BrowserRouter>
