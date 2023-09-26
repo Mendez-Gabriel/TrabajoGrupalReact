@@ -5,8 +5,8 @@ const BottonFooter = ({ Text, link }) => {
 
     return (
         <div>
-                <li>
-                    <Link to={link}>{Text}</Link>
+                <li className='list-group-item mx-2'>
+                    <Link to={link} className='text-decoration-none'>{Text}</Link>
                 </li>
         </div>
     )
