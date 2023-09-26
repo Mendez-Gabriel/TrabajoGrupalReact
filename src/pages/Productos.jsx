@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import CardProducto from '../components/specific/Card/CardProduct'
+import CardProducto from '../components/specific/CardProduct/CardProduct'
 import axios from 'axios'
 
 const Productos = () => {
