@@ -8,9 +8,9 @@ const BottonNav = ({ Text, style, link }) => {
 
     return (
         <div>
-                <li className={`nav-item mx-5 py-2 ${hover}`}>
-                    <Link to={link} className={`${style}`}>{Text}</Link>
-                </li>
+            <li className={`nav-item mx-5 py-2 ${hover}`}>
+                <Link to={link} className={`${style}`}>{Text}</Link>
+            </li>
         </div>
     )
 }
