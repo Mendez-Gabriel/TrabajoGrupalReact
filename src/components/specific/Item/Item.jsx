@@ -5,11 +5,7 @@ import ItemStart from '../ItemStart/ItemStart'
 import { useParams } from 'react-router-dom'
 import Carrousels from '../../general/Carrousel/Carrousels'
 
-const Item = (
-
-  // los props estan silenciados asi no haya error
-  // {image, title, description, category, price}
-) => {
+const Item = () => {
   const urlBase = `https://fakestoreapi.com/products/`;
   const [info, setInfo] = useState([]);
   let params = useParams()
