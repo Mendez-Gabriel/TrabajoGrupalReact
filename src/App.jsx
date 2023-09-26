@@ -28,7 +28,7 @@ function App() {
         <Route path='/masculino' Component={Masculino}/>
         <Route path='/femenino' Component={Femenino}/>
         <Route path='/productos/:id' Component={Item}/>
-        <Route path='*' Component={""}/>
+        <Route path='*' Component={Error404}/>
       </Routes>
     </BrowserRouter>
   )
