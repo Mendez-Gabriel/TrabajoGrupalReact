@@ -7,12 +7,13 @@ import Productos from './pages/Productos';
 import Masculino from './pages/Masculino';
 import Femenino from './pages/Femenino';
 import Item from './components/specific/Item/Item'
+import Footer from "./components/general/footer/Footer";
+import BottonFooter from "./components/specific/BottonFooter/BottonFooter";
 
 function App() {
-  
   return (
     <BrowserRouter>
-      <NavBar 
+      <NavBar
         Element={
           <>
             <BottonNav link={'/'} Text={'Home'} style={'nav-link active text-light'}/>
@@ -30,8 +31,17 @@ function App() {
         <Route path='/productos/:id' Component={Item}/>
         <Route path='*' Component={""}/>
       </Routes>
+      <Footer
+        elements={
+          <>
+            <BottonFooter Text={"Terminos y condiciones"} link={"/*"} />
+            <BottonFooter Text={"Servicios"} link={"/*"} />
+            <BottonFooter Text={"Contactanos"} link={"/*"} />
+          </>
+        }
+      />
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;
