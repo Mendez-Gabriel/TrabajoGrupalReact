@@ -1,18 +1,18 @@
 import React from 'react';
-import styles from './CardProduct.modules.css'; 
+import { Link } from 'react-router-dom';
+// import styles from './CardProduct.modules.css';
 
-function CardProduct({image, title, price}) {
+function CardProduct({ image, title, price,id}) {
 
   return (
-    <div className="card-container">
-        <div className="card-product col-12 col-md-4 col-xl-2">
-          <div className="card-content">
-            <img src={image} alt={title} className="product-image" />
-            <h1 className="product-title">{title}</h1>
-            <div className='precio mb-3'>${price}</div>
-            <a href='#'>Ver más</a>
-          </div>
-        </div>
+
+    <div className="card-product">
+      <div className="card-content">
+        <img src={image} alt={title} className="product-image" style={{width: '200px', height:'200px'}} />
+        <h1 className="product-title">{title}</h1>
+        <div className='precio mb-3'>${price}</div>
+        <Link to={`/productos/${id}`}>Ver más</Link>
+      </div>
     </div>
   );
 }

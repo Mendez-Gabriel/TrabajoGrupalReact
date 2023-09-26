@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import 'bootstrap-icons/font/bootstrap-icons.min.css'
 import ItemStart from '../ItemStart/ItemStart'
+import { useParams } from 'react-router-dom'
 
 const Item = (
   // los props estan silenciados asi no haya error
   // {image, title, description, category, price}
   ) => {
+    let params = useParams()
   const [item, setItem] = useState({})
   useEffect(() => {
-    axios.get('https://fakestoreapi.com/products/15')
+    axios.get(`https://fakestoreapi.com/products/${params.id}`)
       .then(({ data }) => {
         setItem(data)
         // console.log(data)

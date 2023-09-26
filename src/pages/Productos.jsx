@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Producto from '../components/specific/Producto/Producto'
+import CardProducto from '../components/specific/Card/CardProduct'
 import axios from 'axios'
 
 const Productos = () => {
@@ -8,7 +8,6 @@ const Productos = () => {
     axios.get('https://fakestoreapi.com/products')
       .then(({ data }) => {
         setProductos(data)
-        // console.log(data)
       })
       .catch((err) => { console.log(err) })
       .finally(() => { })
@@ -26,7 +25,7 @@ const Productos = () => {
           {
             productos.map((producto) => (
               <div className="col-12 col-md-4 mb-4" key={producto.id}>
-                <Producto title={producto.title} image={producto.image} category={producto.category} description={producto.description} price={producto.price} />
+                <CardProducto title={producto.title} image={producto.image} category={producto.category} description={producto.description} price={producto.price} id={producto.id} />
               </div>
             ))
           }
