@@ -7,7 +7,7 @@ import Productos from './pages/Productos';
 import Masculino from './pages/Masculino';
 import Femenino from './pages/Femenino';
 import Item from './components/specific/Item/Item'
-import Footer from "./components/general/footer/Footer";
+import Footer from "./components/general/Footer/Footer";
 import BottonFooter from "./components/specific/BottonFooter/BottonFooter";
 import Error404 from './pages/Error404';
 import Contact from './pages/contact/Contact';
