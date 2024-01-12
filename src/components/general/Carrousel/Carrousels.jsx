@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
-import Imagen from '../imagen/imagen';
+import Imagen from '../imagen/Imagen';
 
 const Carrousels = ({ infoImage }) => {
 
